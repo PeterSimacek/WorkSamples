@@ -1,6 +1,6 @@
-# GraphForCodemanufaktur
+# Work Samples for application as Junior Java Developer
 
-This repository contains a Code Example intended to support my application as a Junior Java Developer at the codemanufaktur.
+This repository contains a Code Example intended to support my application as a Junior Java Developer.
 Since the development of tools and features for graph databases ist part of the job activities, I decided to implement
 my own simple version of a graph database.
 
