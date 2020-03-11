@@ -1,3 +1,6 @@
+// A Java Class to implement labeled property nodes.
+// Using this class together with the generic class Graph creates labeled property graphs.
+
 import java.util.*;
 
 public class LabeledPropertyNode {
@@ -7,7 +10,7 @@ public class LabeledPropertyNode {
 	String label;
 	Map<String,String> properties = new HashMap<String,String>();
 	
-	//Constructor
+	//Constructors
 	public LabeledPropertyNode(String name) {
 		this.name = name;
 	}

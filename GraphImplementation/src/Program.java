@@ -1,4 +1,3 @@
-
 public class Program {
 
 	public static void main(String[] args) {
@@ -22,7 +21,7 @@ public class Program {
 		// A node labeled as director
 		LabeledPropertyNode pJAckson = new LabeledPropertyNode("Peter Jackson", "Director");
 	
-		// Connect the graph with two types of edges: "directed by" and "starring"
+		// Connect the nodes with two types of edges: "directed by" and "starring"
 		filmLandscape.addEdge(kong, pJAckson, "directed by", false);
 		filmLandscape.addEdge(lotr1, pJAckson, "directed by", false);
 		filmLandscape.addEdge(hobbit1, pJAckson, "directed by", false);
@@ -55,6 +54,7 @@ public class Program {
 				}
 			}
 		}
+		
 	}
 
 }

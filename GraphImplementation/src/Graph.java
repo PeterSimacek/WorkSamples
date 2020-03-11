@@ -1,14 +1,19 @@
+// A Java Class which implements a Graph using Generics.
+// The following graph implementation is based of the solution from:
+// https://www.geeksforgeeks.org/implementing-generic-graph-in-java/
+// It was extended by some utility functions and weighted edges.
+
 import java.util.*;
 import org.javatuples.Pair;
-
 
 public class Graph<A,B> {
 	// A HashMap is used to store the nodes as keys and their adjacency list as values.
 	// The adjacency list consists of pairs.
-	// First value of a pair is a node, second value is an edge property. 
+	// First value of a pair is a node, which can be of any datatype A. 
+	// Second value is an edge property of datatype B. 
     private Map<A, List< Pair<A,B> > > map = new HashMap<>(); 
   
-    // Adds a new vertex to the graph 
+    // Adds a new node to the graph 
     public void addNode(A s) 
     { 
         map.put(s, new LinkedList< Pair<A,B> >()); 
@@ -56,7 +61,7 @@ public class Graph<A,B> {
     } 
   
     // Prints out whether a node is present or not. 
-    public void hasNode(LabeledPropertyNode s) 
+    public void hasNode(A s) 
     { 
         if (this.map.containsKey(s)) { 
             System.out.println("The graph contains "
@@ -115,8 +120,7 @@ public class Graph<A,B> {
             builder.append("\n" + n.toString() + "\n"); 
             for (Pair<A,B> p : map.get(n)) { 
                 builder.append("- " + p.getValue1().toString() + " -> " + p.getValue0().toString() + "\n"); 
-            } 
-//            builder.append("\n"); 
+            }  
         } 
   
         return (builder.toString());
